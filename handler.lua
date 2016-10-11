@@ -18,7 +18,7 @@ function CustomHandler:access(config)
   if not token then
     ngx.header["WWW-Authenticate"] = _realm
     return responses.send_HTTP_UNAUTHORIZED("No API key found in headers")
-
+  end
 end
 
 return CustomHandler
