@@ -16,8 +16,8 @@ build = {
   modules = {
     -- ["kong.plugins.my-kong-plugin.api"] = "/path/to/api.lua",
     -- ["kong.plugins.my-kong-plugin.daos"] = "/path/to/daos.lua",
-    ["kong.plugins.my-kong-plugin.handler"] = "/home/liqiang/Documents/Lua/KongJwt/handler.lua",
+    ["kong.plugins.KongJwt.handler"] = "/home/liqiang/Documents/Lua/KongJwt/handler.lua",
     -- ["kong.plugins.my-kong-plugin.migrations.cassandra"] = "/path/to/migrations.cassandra.lua",
-    ["kong.plugins.my-kong-plugin.schema"] = "/home/liqiang/Documents/Lua/KongJwt/schema.lua"
+    ["kong.plugins.KongJwt.schema"] = "/home/liqiang/Documents/Lua/KongJwt/schema.lua"
   }
 }
