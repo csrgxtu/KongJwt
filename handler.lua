@@ -12,8 +12,8 @@ function CustomHandler:access(config)
   CustomHandler.super.access(self)
 
   local headers = get_headers()
-  local apikey = headers["apikey"]
-  print(apikey)
+  local token = headers["token"]
+  print(token)
 end
 
 return CustomHandler

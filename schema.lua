@@ -2,7 +2,7 @@
 return {
   no_consumer = true,
   fields = {
-    key_names = {type = "array", required = true, default = {"apikey"}},
+    key_names = {type = "array", required = true, default = {"token"}},
     hide_credentials = {type = "boolean", default = false}
   }
 }
