@@ -10,8 +10,8 @@ function CustomHandler:access(config)
   CustomHandler.super.access(self)
 
   print("KongJwt")
-  print(config.key_names) -- {"apikey"}
-  print(config.hide_credentials) -- false
+  -- print(config.key_names) -- {"apikey"}
+  -- print(config.hide_credentials) -- false
 end
 
 return CustomHandler
