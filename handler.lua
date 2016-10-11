@@ -1,5 +1,5 @@
 -- handler.lua
--- local jwt = require "luajwt"
+local jwt = require "luajwt"
 local BasePlugin = require "kong.plugins.base_plugin"
 local CustomHandler = BasePlugin:extend()
 local responses = require "kong.tools.responses"
@@ -14,10 +14,17 @@ function CustomHandler:access(config)
 
   local headers = get_headers()
   local token = headers["token"]
-  print(token)
+
   if not token then
     ngx.header["WWW-Authenticate"] = _realm
     return responses.send_HTTP_UNAUTHORIZED("No API key found in headers")
+  end
+
+  local key = "^beautifulreading$"
+  local validate = true
+  local decoded, err = jwt.decode(token, key, validate)
+  if err then
+    return responses.send_HTTP_FORBIDDEN("Invalid authentication credentials")
   end
 end
 
