@@ -1,4 +1,5 @@
 -- handler.lua
+-- local jwt = require "luajwt"
 local BasePlugin = require "kong.plugins.base_plugin"
 local CustomHandler = BasePlugin:extend()
 
@@ -9,6 +10,7 @@ end
 function CustomHandler:access(config)
   CustomHandler.super.access(self)
 
+  ngx.say(ngx.header)
   print("NiMaBi")
   -- print(config.key_names) -- {"apikey"}
   -- print(config.hide_credentials) -- false
