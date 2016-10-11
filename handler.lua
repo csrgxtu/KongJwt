@@ -12,10 +12,8 @@ function CustomHandler:access(config)
   CustomHandler.super.access(self)
 
   local headers = get_headers()
-  print(headers["apikey"])
-  print("NiMaBi")
-  -- print(config.key_names) -- {"apikey"}
-  -- print(config.hide_credentials) -- false
+  local apikey = headers["apikey"]
+  print(apikey)
 end
 
 return CustomHandler
