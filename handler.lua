@@ -11,7 +11,8 @@ end
 function CustomHandler:access(config)
   CustomHandler.super.access(self)
 
-  ngx.say(ngx.req.get_headers())
+  -- ngx.say(ngx.req.get_headers())
+  ngx.say(ngx.var.request_uri)
   print("NiMaBi")
   -- print(config.key_names) -- {"apikey"}
   -- print(config.hide_credentials) -- false
